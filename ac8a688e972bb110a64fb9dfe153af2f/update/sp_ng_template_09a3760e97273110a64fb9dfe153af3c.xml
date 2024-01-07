@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_ng_template">
+    <sp_ng_template action="INSERT_OR_UPDATE">
+        <id>colorPickerTemplate.html</id>
+        <sp_widget/>
+        <sys_class_name>sp_ng_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-07 02:13:40</sys_created_on>
+        <sys_id>09a3760e97273110a64fb9dfe153af3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>colorPickerTemplate.html</sys_name>
+        <sys_package display_value="AngularJS_dpunkt" source="x_968886_angularjs">ac8a688e972bb110a64fb9dfe153af2f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AngularJS_dpunkt">ac8a688e972bb110a64fb9dfe153af2f</sys_scope>
+        <sys_update_name>sp_ng_template_09a3760e97273110a64fb9dfe153af3c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-07 02:13:40</sys_updated_on>
+        <template><![CDATA[R:<input type="range" name="color_r" min="0" max="255" step="1" ng-model="r"/><br/>
+G:<input type="range" name="color_g" min="0" max="255" step="1" ng-model="g"/><br/>
+B:<input type="range" name="color_b" min="0" max="255" step="1" ng-model="b"/><br/>
+A:<input type="range" name="color_a" min="0" max="1" step="0.01" ng-model="a"/>
+			
+<div style="width: 300px; height: 100px; background-color: rgba({{r}}, {{g}}, {{b}}, {{a}});"></div>]]></template>
+    </sp_ng_template>
+</record_update>

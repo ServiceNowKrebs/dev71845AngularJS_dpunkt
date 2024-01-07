@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-06 21:24:54</sys_created_on>
+        <sys_id>1792bd8297233110a64fb9dfe153af32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_968886_angularjs_ColorPickerApp.x_968886_angularjs.user</sys_name>
+        <sys_package display_value="AngularJS_dpunkt" source="x_968886_angularjs">ac8a688e972bb110a64fb9dfe153af2f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AngularJS_dpunkt">ac8a688e972bb110a64fb9dfe153af2f</sys_scope>
+        <sys_security_acl display_value="x_968886_angularjs_ColorPickerApp">df92bd8297233110a64fb9dfe153af2d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1792bd8297233110a64fb9dfe153af32</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-06 21:24:54</sys_updated_on>
+        <sys_user_role display_value="x_968886_angularjs.user" name="x_968886_angularjs.user">10aa6c8e972bb110a64fb9dfe153af45</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

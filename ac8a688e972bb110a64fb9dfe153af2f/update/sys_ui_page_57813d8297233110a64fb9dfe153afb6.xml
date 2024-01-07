@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[var colorPickerApp = angular.module('colorPickerApp', []);
+
+colorPickerApp.controller('MainCtrl', function($scope) {
+								$scope.onColorChange = function(r,g,b,a) {
+									//console.log('onColorChange', r, g, b, a);
+									alert('onColorChange: ' + r + ", " + g + ", " + b + ", " + a);
+								};
+});
+
+colorPickerApp.directive('colorPicker', function() {
+		return {
+			scope: {
+				r: '@initR',
+				g: '@initG',
+				b: '@initB',
+				a: '@initA',
+				onChange: '&'
+			},
+			restrict: 'E',
+			template: 'R:<input type="range" name="color_r" min="0" max="255" step="1" ng-model="r"/><br/>G:<input type="range" name="color_g" min="0" max="255" step="1" ng-model="g"/><br/>B:<input type="range" name="color_b" min="0" max="255" step="1" ng-model="b"/><br/>A:<input type="range" name="color_a" min="0" max="1" step="0.01" ng-model="a"/><div style="width: 300px; height: 100px; background-color: rgba({{r}}, {{g}}, {{b}}, {{a}});"></div>',
+			link: function(scope) {
+					var COLORS = ['r', 'g', 'b', 'a'];
+					COLORS.forEach(function(value) {
+						scope.$watch(value, function(newValue, oldValue) {
+							if (newValue !== oldValue) {
+								if (angular.isFunction(scope.onChange)) {
+									scope.onChange(generateColorChangeObject());
+								}
+							}
+						});
+					});
+				
+				var generateColorChangeObject = function() {
+					var obj = {};
+					
+					COLORS.forEach(function(value) {
+						obj[value] = scope[value];
+					});
+					
+					return obj;
+				};
+			}
+		}; 
+});]]></client_script>
+        <description>'colorPickerTemplate.html',</description>
+        <direct>false</direct>
+        <endpoint>x_968886_angularjs_ColorPickerApp.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	<g:requires name="scripts/angular_includes_1.5.11.js" includes="true" />
+	
+	<html ng-app="colorPickerApp">
+		<head>
+			<meta charset="utf-8"/>
+		</head>
+		<body ng-controller="MainCtrl">
+			<h1>AngularJS Schnellstart ColorPicker</h1>
+			<color-picker init-r="255" init-g="0" init-b="0" init-a="1.0" on-change="onColorChange(r,g,b,a)">
+			</color-picker>
+			
+		</body>
+	</html>
+
+	
+</j:jelly>]]></html>
+        <name>ColorPickerApp</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-06 21:24:54</sys_created_on>
+        <sys_id>57813d8297233110a64fb9dfe153afb6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>ColorPickerApp</sys_name>
+        <sys_package display_value="AngularJS_dpunkt" source="x_968886_angularjs">ac8a688e972bb110a64fb9dfe153af2f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AngularJS_dpunkt">ac8a688e972bb110a64fb9dfe153af2f</sys_scope>
+        <sys_update_name>sys_ui_page_57813d8297233110a64fb9dfe153afb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-07 03:05:45</sys_updated_on>
+    </sys_ui_page>
+</record_update>

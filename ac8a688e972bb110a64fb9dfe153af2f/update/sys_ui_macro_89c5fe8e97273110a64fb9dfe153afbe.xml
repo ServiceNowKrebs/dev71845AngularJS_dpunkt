@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>colorPickerTemplate</name>
+        <scoped_name>x_968886_angularjs_colorPickerTemplate</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-07 02:19:21</sys_created_on>
+        <sys_id>89c5fe8e97273110a64fb9dfe153afbe</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>colorPickerTemplate</sys_name>
+        <sys_package display_value="AngularJS_dpunkt" source="x_968886_angularjs">ac8a688e972bb110a64fb9dfe153af2f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AngularJS_dpunkt">ac8a688e972bb110a64fb9dfe153af2f</sys_scope>
+        <sys_update_name>sys_ui_macro_89c5fe8e97273110a64fb9dfe153afbe</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-07 03:07:02</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	R:<input type="range" name="color_r" min="0" max="255" step="1" ng-model="r"/><br/>
+	G:<input type="range" name="color_g" min="0" max="255" step="1" ng-model="g"/><br/>
+	B:<input type="range" name="color_b" min="0" max="255" step="1" ng-model="b"/><br/>
+	A:<input type="range" name="color_a" min="0" max="1" step="0.01" ng-model="a"/>
+			
+	<div style="width: 300px; height: 100px; background-color: rgba({{r}}, {{g}}, {{b}}, {{a}});"></div>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>
